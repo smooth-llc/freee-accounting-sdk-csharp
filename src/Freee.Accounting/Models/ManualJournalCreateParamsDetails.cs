@@ -185,7 +185,7 @@ namespace Freee.Accounting.Models
         /// 消費税額（指定しない場合は自動で計算されます）
         /// </summary>
         /// <value>消費税額（指定しない場合は自動で計算されます）</value>
-        [DataMember(Name = "vat", EmitDefaultValue = false)]
+        [DataMember(Name = "vat", EmitDefaultValue = true)]
         public int Vat { get; set; }
 
         /// <summary>
@@ -243,63 +243,63 @@ namespace Freee.Accounting.Models
             if (input == null)
                 return false;
 
-            return 
+            return
                 (
                     this.AccountItemId == input.AccountItemId ||
                     this.AccountItemId.Equals(input.AccountItemId)
-                ) && 
+                ) &&
                 (
                     this.Amount == input.Amount ||
                     this.Amount.Equals(input.Amount)
-                ) && 
+                ) &&
                 (
                     this.Description == input.Description ||
                     (this.Description != null &&
                     this.Description.Equals(input.Description))
-                ) && 
+                ) &&
                 (
                     this.EntrySide == input.EntrySide ||
                     this.EntrySide.Equals(input.EntrySide)
-                ) && 
+                ) &&
                 (
                     this.ItemId == input.ItemId ||
                     this.ItemId.Equals(input.ItemId)
-                ) && 
+                ) &&
                 (
                     this.PartnerCode == input.PartnerCode ||
                     (this.PartnerCode != null &&
                     this.PartnerCode.Equals(input.PartnerCode))
-                ) && 
+                ) &&
                 (
                     this.PartnerId == input.PartnerId ||
                     this.PartnerId.Equals(input.PartnerId)
-                ) && 
+                ) &&
                 (
                     this.SectionId == input.SectionId ||
                     this.SectionId.Equals(input.SectionId)
-                ) && 
+                ) &&
                 (
                     this.Segment1TagId == input.Segment1TagId ||
                     this.Segment1TagId.Equals(input.Segment1TagId)
-                ) && 
+                ) &&
                 (
                     this.Segment2TagId == input.Segment2TagId ||
                     this.Segment2TagId.Equals(input.Segment2TagId)
-                ) && 
+                ) &&
                 (
                     this.Segment3TagId == input.Segment3TagId ||
                     this.Segment3TagId.Equals(input.Segment3TagId)
-                ) && 
+                ) &&
                 (
                     this.TagIds == input.TagIds ||
                     this.TagIds != null &&
                     input.TagIds != null &&
                     this.TagIds.SequenceEqual(input.TagIds)
-                ) && 
+                ) &&
                 (
                     this.TaxCode == input.TaxCode ||
                     this.TaxCode.Equals(input.TaxCode)
-                ) && 
+                ) &&
                 (
                     this.Vat == input.Vat ||
                     this.Vat.Equals(input.Vat)
